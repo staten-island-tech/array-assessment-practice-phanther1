@@ -86,26 +86,42 @@ const titles = [
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
-books.forEach((books) => {
-  console.log(books.authorFirst, books.authorLast + ":", );
-});
+
+/* books.forEach((books) => {
+  console.log(books.authorFirst + " " + books.authorLast + " wrote " + books.name + " in " + books.publishDate);
+}); */
 
 //Sort books from oldest to most recent
-const sort = books
-  books.sort(function(books1, books2) {
-  return books1.publishDate_count - books2.publishDate_count;
-  })
-  console.log(sort);
 
+/* books.sort((a,b) => (a.publishDate - b.publishDate)); */
 
 //sort books alphabetically
 
+books.sort(function(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+}
+console.log(books));
 //Find who wrote War and Peace
+
+
 
 //how many books were written before 1900?
 
+
+
 //was there at least one book published within the last 100 years?
+
+
 
 //was every book published within the last 100 years?
 
+
+
 //print a list of books that "includes" the genre historical
+
